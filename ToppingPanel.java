@@ -1,28 +1,28 @@
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
 import java.awt.GridLayout;
 import javax.swing.BorderFactory; 
 import java.awt.BorderLayout;
+import javax.swing.JCheckBox;
 import java.util.ArrayList;
 import javax.swing.AbstractButton;
+import javax.swing.ButtonGroup;
 
-public class CrustPanel extends JPanel {
+public class ToppingPanel extends JPanel {
 	private ArrayList<AbstractButton> buttonArray;
-	
-	public CrustPanel(){
+
+	public ToppingPanel(){
 		super();
 		buttonArray = new ArrayList<AbstractButton>();
-		//Crust Panel and Border
-		setLayout(new GridLayout(2,1));
-		setBorder(BorderFactory.createTitledBorder("Crust"));
-		//Crust Panel Content
-		buttonArray.add(new JRadioButton("Deep Dish"));
-		buttonArray.add(new JRadioButton("Thin Crust"));
-		//Create button group and add each button to that group
-		ButtonGroup radioButtonGroup = new ButtonGroup();
+		//Meat/Cheese Panel and Border
+		setLayout(new GridLayout(4,1));
+		setBorder(BorderFactory.createTitledBorder("Toppings"));
+		//Meat/Cheese Panel Content 
+		buttonArray.add(new JCheckBox("Extra Cheese"));
+		buttonArray.add(new JCheckBox("Pepperoni"));
+		buttonArray.add(new JCheckBox("Sausage"));
+		buttonArray.add(new JCheckBox("Bacon"));
+		//add to panel
 		for(AbstractButton element : buttonArray) {
-			radioButtonGroup.add(element);
 			add(element);
 		}
 		setVisible(true);

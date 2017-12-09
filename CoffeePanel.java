@@ -7,18 +7,20 @@ import java.awt.BorderLayout;
 import java.util.ArrayList;
 import javax.swing.AbstractButton;
 
-public class CrustPanel extends JPanel {
+public class CoffeePanel extends JPanel {
 	private ArrayList<AbstractButton> buttonArray;
 	
-	public CrustPanel(){
+	public CoffeePanel(){
 		super();
 		buttonArray = new ArrayList<AbstractButton>();
-		//Crust Panel and Border
-		setLayout(new GridLayout(2,1));
-		setBorder(BorderFactory.createTitledBorder("Crust"));
+		//Coffee Panel and Border
+		setLayout(new GridLayout(4,1));
+		setBorder(BorderFactory.createTitledBorder("Coffee"));
 		//Crust Panel Content
-		buttonArray.add(new JRadioButton("Deep Dish"));
-		buttonArray.add(new JRadioButton("Thin Crust"));
+		buttonArray.add(new JRadioButton("None"));
+		buttonArray.add(new JRadioButton("Regular Coffee"));
+		buttonArray.add(new JRadioButton("Decaf Coffee"));
+		buttonArray.add(new JRadioButton("Cappuccino"));
 		//Create button group and add each button to that group
 		ButtonGroup radioButtonGroup = new ButtonGroup();
 		for(AbstractButton element : buttonArray) {
